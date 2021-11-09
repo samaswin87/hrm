@@ -45,57 +45,8 @@
               />
             </v-form>
           </v-card-text>
-          <v-card-text>
-            <v-row
-              class="text-center"
-              dense
-              no-gutters
-            >
-              <v-col cols="12">
-                <v-btn-toggle>
-                  <v-btn
-                    text
-                    color="warning"
-                    @click="setUserToLogin(0)"
-                  >
-                    <span>editor</span>
-                  </v-btn>
-                  <v-btn
-                    text
-                    color="warning"
-                    @click="setUserToLogin(1)"
-                  >
-                    <span>admin</span>
-                  </v-btn>
-                </v-btn-toggle>
-              </v-col>
-            </v-row>
-          </v-card-text>
           <v-card-actions>
-            <localization />
-            <v-btn icon>
-              <v-icon color="blue">
-                mdi-facebook
-              </v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon color="red">
-                mdi-google
-              </v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon color="light-blue">
-                mdi-twitter
-              </v-icon>
-            </v-btn>
-            <v-spacer />
-            <v-btn
-              color="primary"
-              outlined
-              to="/singup"
-            >
-              {{ $t('login.singUp') }}
-            </v-btn>
+            <v-spacer></v-spacer>
             <v-btn
               color="primary"
               :loading="loading"
@@ -111,12 +62,11 @@
 </template>
 
 <script>
-import Localization from '../widget/AppLocalization.vue';
 import { userAdmin, userEditor } from '@/api/mock';
 
 export default {
   name: 'SingIn',
-  components: { Localization },
+  components: { },
   data: () => ({
     loading: false,
     model: {

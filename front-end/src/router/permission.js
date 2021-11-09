@@ -80,7 +80,11 @@ router.beforeEach(async (to, from, next) => {
         next();
       } else {
         logMsg += '\t[!whiteList]';
-        next(`/singin?redirect=${to.path}`);
+        if (to.path === '/') {
+          next('/land');
+        } else {
+          next(`/singin?redirect=${to.path}`);
+        }
       }
     }
   } catch (err) {

@@ -1,8 +1,5 @@
 <template>
   <div>
-    <v-app-bar class="white">
-      <v-toolbar-title>{{ info.title }}</v-toolbar-title>
-    </v-app-bar>
     <v-content>
       <section>
         <v-parallax
@@ -23,7 +20,7 @@
               {{ info.title }}
             </h1>
             <div class="subheading mb-3 text-center">
-              Powered by Vuetify
+              Human Resource Management
             </div>
             <v-btn
               class="blue lighten-2 mt-5"
@@ -45,11 +42,8 @@
           >
             <div class="text-center">
               <h2 class="headline">
-                The best way to start developing
+                Designed to automate human resource business processes
               </h2>
-              <span class="subheading">
-                Cras facilisis mi vitae nunc
-              </span>
             </div>
           </v-col>
           <v-col cols="12">
@@ -65,7 +59,7 @@
                         x-large
                         class="blue--text text--lighten-2"
                       >
-                        mdi-material-design
+                        mdi-account
                       </v-icon>
                     </v-card-text>
                     <v-card-title
@@ -73,7 +67,7 @@
                       class="layout justify-center"
                     >
                       <div class="headline text-center">
-                        Material Design
+                        Employee Management
                       </div>
                     </v-card-title>
                     <v-card-text>
@@ -91,7 +85,7 @@
                         x-large
                         class="blue--text text--lighten-2"
                       >
-                        mdi-flash
+                        mdi-clock
                       </v-icon>
                     </v-card-text>
                     <v-card-title
@@ -99,7 +93,7 @@
                       class="layout justify-center"
                     >
                       <div class="headline">
-                        Fast development
+                        Timesheet
                       </div>
                     </v-card-title>
                     <v-card-text>
@@ -117,7 +111,7 @@
                         x-large
                         class="blue--text text--lighten-2"
                       >
-                        mdi-open-source-initiative
+                        mdi-account-cash
                       </v-icon>
                     </v-card-text>
                     <v-card-title
@@ -125,7 +119,67 @@
                       class="layout justify-center"
                     >
                       <div class="headline text-center">
-                        Completely Open Sourced
+                        Expenses
+                      </div>
+                    </v-card-title>
+                    <v-card-text>
+                      {{ lorem }}
+                    </v-card-text>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-col>
+        </v-row>
+        <v-row align="center">
+          <v-col cols="12">
+            <v-container>
+              <v-row align="enter">
+                <v-col
+                  cols="12"
+                  md="6"
+                >
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-center">
+                      <v-icon
+                        x-large
+                        class="blue--text text--lighten-2"
+                      >
+                        mdi-account
+                      </v-icon>
+                    </v-card-text>
+                    <v-card-title
+                      primary-title
+                      class="layout justify-center"
+                    >
+                      <div class="headline text-center">
+                        Talent Acquisition
+                      </div>
+                    </v-card-title>
+                    <v-card-text>
+                      {{ lorem }}
+                    </v-card-text>
+                  </v-card>
+                </v-col>
+                <v-col
+                  cols="12"
+                  md=""
+                >
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-center">
+                      <v-icon
+                        x-large
+                        class="blue--text text--lighten-2"
+                      >
+                        mdi-clock
+                      </v-icon>
+                    </v-card-text>
+                    <v-card-title
+                      primary-title
+                      class="layout justify-center"
+                    >
+                      <div class="headline">
+                        Appraisals
                       </div>
                     </v-card-title>
                     <v-card-text>
@@ -139,31 +193,6 @@
         </v-row>
       </section>
 
-      <section>
-        <v-parallax
-          src="img/land/section.jpg"
-          height="380"
-        >
-          <v-row
-            align="center"
-            justify="center"
-            class="flex-column"
-          >
-            <div class="headline white--text mb-3 text-center">
-              Web development has never been easier
-            </div>
-            <em>Kick-start your application today</em>
-            <v-btn
-              class="blue lighten-2 mt-5"
-              dark
-              large
-              to="/singin"
-            >
-              Get Started
-            </v-btn>
-          </v-row>
-        </v-parallax>
-      </section>
 
       <section>
         <v-container>
@@ -244,35 +273,6 @@
         </v-container>
       </section>
 
-      <v-footer class="blue darken-2">
-        <v-row align="center">
-          <v-col
-            cols="12"
-            class="text-center"
-          >
-            <div class="white--text">
-              Made with by
-              <a
-                class="white--text"
-                href="https://vuetifyjs.com"
-                target="_blank"
-              >Vuetify</a>
-              Paralax Them by
-              <a
-                class="white--text"
-                href="https://github.com/vwxyzjn"
-                target="_blank"
-              >Costa Huang</a>
-              {{ info.title }} by
-              <a
-                class="white--text"
-                href="https://nelsoneax.github.io"
-                target="_blank"
-              >NelsonEAX</a>
-            </div>
-          </v-col>
-        </v-row>
-      </v-footer>
     </v-content>
   </div>
 </template>
