@@ -46,7 +46,7 @@
             </v-form>
           </v-card-text>
           <v-card-actions>
-            <v-spacer></v-spacer>
+            <v-spacer />
             <v-btn
               color="primary"
               :loading="loading"
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { userAdmin, userEditor } from '@/api/mock';
+import { HTTP } from '@/components/http-common';
 
 export default {
   name: 'SingIn',
@@ -70,26 +70,19 @@ export default {
   data: () => ({
     loading: false,
     model: {
-      email: userAdmin.email,
-      password: userAdmin.password,
+      email: '',
+      password: '',
     },
   }),
   methods: {
     async login() {
-      await this.$store.dispatch('LoginByEmail', {
+      await HTTP.post('users/sign_in', { user: { email: this.model.email, password: this.model.password } });
+
+      this.$store.dispatch('LoginByEmail', {
         email: this.model.email,
         password: this.model.password,
       });
-      await this.$router.push(this.$route.query.redirect || '/');
-    },
-    setUserToLogin(id) {
-      if (id) {
-        this.model.email = userAdmin.email;
-        this.model.password = userAdmin.password;
-      } else {
-        this.model.email = userEditor.email;
-        this.model.password = userEditor.password;
-      }
+      await this.$router.push(this.$route.query.redirect || '/dash');
     },
   },
 };

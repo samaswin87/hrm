@@ -1,10 +1,10 @@
-class Users::SessionsController < Devise::SessionsController
+class API::Users::SessionsController < Devise::SessionsController
     respond_to :json
   
     private
   
     def respond_with(resource, _opts = {})
-      render json: { message: 'You are logged in.' }, status: :ok
+      render_jsonapi_response(resource)
     end
   
     def respond_to_on_destroy

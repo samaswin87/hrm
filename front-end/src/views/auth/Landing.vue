@@ -272,7 +272,6 @@
           </v-row>
         </v-container>
       </section>
-
     </v-content>
   </div>
 </template>
